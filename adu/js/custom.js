@@ -10,9 +10,9 @@ var Nolly = {
 	// navigation background
 	naviBg: function () {
 		if($('body').scrollTop() > 50) {
-			$(".navbar-light").removeClass("navbar-transparent");
+			$(".navbar-light").hide();
 		} else {
-			$(".navbar-light").addClass("navbar-transparent");
+			$(".navbar-light").show();
 		}
 	},
 	isMobileNaviOpen: function () {

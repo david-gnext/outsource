@@ -26,8 +26,12 @@ body {
     border: 6px solid rgba(255,255,255, 0.45);
     color: #ffffff;
 }
+.bg-lightgrey {
+  background: lightgrey;
+}
 .page-row {
 	width: 96.5%;
+  margin: 0;
 }
 .vertical-center {
 	top: 50%;
@@ -47,11 +51,17 @@ button:focus {
 }
 /*navigation bar*/
 #logo_img {
-	width:100px;
+	width:60px;
 	height:auto;
+}
+#navbarText {
+  padding: 0;
 }
 #navbarText ul {
 	padding: .25rem 0;
+}
+.navbar {
+  padding: .12rem 1rem;
 }
 .navbar-toggler {
   outline: 0;
@@ -68,7 +78,7 @@ button:focus {
   font-size: 1.25rem;
 }
 .navbar-transparent {
-	background-color: rgba(0,0,0,0.5);
+	background: rgba(0,0,0,0.5);
 	border-bottom: 1px solid #ccc;
 }
 .navbar .nav-item {
@@ -76,10 +86,15 @@ button:focus {
 }
 .navbar .nav-link {
   font-size: 14px;
+  line-height: 1;
   font-weight: 400;
+  letter-spacing: 0.5px;
+  font-family: 'Fira Sans Condensed';
+  white-space: nowrap;
+  text-transform: uppercase;
 }
-.navbar .navbar-brand:hover,
-.navbar .navbar-brand:focus {
+.navbar-transparent .navbar-brand:hover,
+.navbar-transparent .navbar-brand:focus {
   background-color: transparent;
   color: #ffffff;
 }
@@ -162,8 +177,8 @@ button:focus {
 	color: #aaaaaa;
 	font-size: 14px;
 }
-#video_list .card {
-
+#video_list div {
+  padding: 0;
 }
 #video_list .card img {
 	height: 30%;
@@ -257,6 +272,9 @@ button:focus {
 #footer {
 	background: black;
 }
+#footer div div {
+  padding: 0;
+}
 #footer_dvd {
 	font-size: 2rem;
 	font-weight: bold;
@@ -265,6 +283,9 @@ button:focus {
 #footer blockquote {
 	font-size: 15px;
 	font-family: 'Arimo';
+}
+#copyright_text {
+  color: white;
 }
 #copyright_text,.org-link {
 	  text-transform: uppercase;
@@ -278,6 +299,7 @@ button:focus {
 }
 .org-name {
 	font-size: 1.5rem;
+  text-transform: uppercase;
 }
 .social-icon {
 	display: inline-flex;
@@ -303,7 +325,7 @@ button:focus {
   .footer-dvd div {
     text-align: center;
     margin: 1rem 0;
-  }
+  }  
   .navbar-transparent {
     background: #f7f7f7;
   }
@@ -319,10 +341,12 @@ button:focus {
   	margin: 0;
   	font-weight: 700;
   	text-align: left;
-  	font-size: 30px;
+  	font-size: 32px;
+    padding: .25rem 0;
+    text-transform: uppercase;
   }
   .navbar .nav-item {
-    padding-left: 1.5rem;
+    padding-left: 1rem;
   }
   .navbar-transparent .navbar-brand {
     color: #ffffff;
@@ -330,9 +354,9 @@ button:focus {
   .navbar-transparent .navbar-nav .nav-link {
   	color: #ffffff;
   }
-  .navbar-transparent .navbar-nav .active .nav-link {
-  	color: #ddd;
-  	border-bottom: 2px solid white;
+  .navbar-transparent .navbar-nav .active .nav-link,.navbar-transparent .navbar-nav .nav-link:hover {
+  	color: red;
+  	border-bottom: 2px solid red;
   }
   .right-item {
     width: 90%;
