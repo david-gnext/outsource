@@ -1,0 +1,108 @@
+/*common*/
+.vertical-center {
+	top: 50%;
+	transform: translateY(-50%);
+	position: relative;
+}
+.horizontal-center {
+	left: 50%;
+	transform: translateX(-50%);
+	position: relative;
+}
+.bg-transparent {
+	background: rgba(0,0,0,0.5);
+}
+/*navigation bar*/
+#logo_img {
+	width:100px;
+	height:auto;
+}
+.navbar-transparent {
+	background-color: rgba(0,0,0,0.5);	
+	border-bottom: 1px solid #ccc;
+}
+.navbar-transparent .navbar-brand {
+	color: white;
+}
+.navbar-transparent .navbar-nav .nav-link {
+	color: #eee;
+}
+.navbar-transparent .navbar-nav .active .nav-link {
+	color: #ddd;
+	border-bottom: 2px solid white;
+}
+/*slider */
+#movie_slider {
+	cursor: pointer;
+}
+.carousel-inner {
+
+}
+.carousel-inner .carousel-item {
+	height: 90vh;
+}
+.carousel-caption {
+	right: auto;
+	top: 25%;
+	left:5%;	
+	font-family: 'Fira Sans Condensed', sans-serif;
+	font-weight: 700;
+}
+.carousel-caption h1 {
+	text-align: left;
+	width: 90px;
+	font-size: 1.3rem;
+	border-bottom: 3px solid #d9534f;
+}
+.carousel-caption .movie-caption {
+	font-size: 80px;	
+}
+.carousel-control-prev,.carousel-control-next {
+	width: 5%;
+}
+#play_movie {	
+	font-size: 50px;
+	left: 48%;
+    color: red;
+}
+#play_movie .fa-play {
+	cursor: pointer;
+}
+/*movie modal box*/
+#myModal .modal-dialog {
+	max-width: 90%;
+	text-align: center;
+}
+/* left side */
+#left_side_title {
+	font-size: 4rem;
+	font-weight: 700;
+}
+#video_list .card {
+	box-shadow: 0 0 1rem .001rem rgba(0, 0, 0, 0.92);
+}
+#video_list .card img {
+	height: 30%;
+}
+/* right side */
+.right-item {
+	width: 80%;
+	text-align: center;
+}
+.right-item h2 {
+	font-size: 1.3rem;
+}
+/* footer */
+#footer {
+	background: black;
+}
+#footer_dvd {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+}
+
+@media (max-width: 500px) {
+	#footer_dvd p {
+		margin: 0 !important;
+	}
+}
