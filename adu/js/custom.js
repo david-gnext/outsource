@@ -9,6 +9,9 @@ var Nolly = {
 	},
 	// navigation background
 	naviBg: function () {
+		if($(".navbar-toggler").attr("aria-expanded") == 'true') {
+			return;
+		}
 		if($('body').scrollTop() > 50) {
 			$(".navbar-light").hide();
 		} else {
@@ -23,9 +26,14 @@ var Nolly = {
 			$(".navbar-toggler span").show();
 			$(".navbar-toggler svg").hide();
 		}
+	},
+	loadMore: function () {
+		$("#video_list > div").each(function(i) {
+			if(i == 0) return;
+			$("#video_list").append($(this)[0].outerHTML);
+		})
 	}
 };
-
 $(document).ready(function () {
 	Nolly.init();
 	$("#play_movie,#movie_slider .carousel-inner").on("click", function () {
@@ -39,5 +47,21 @@ $(document).ready(function () {
 	});
 	$(".navbar-toggler").on('click', function() {
 		Nolly.isMobileNaviOpen();
+	});
+	$("#load_more").on('click', function() {
+		Nolly.loadMore();
+	});
+	$(".nav-link .dropdown-toggle").on("click", function() {
+		if($(".navbar-toggler").attr("aria-expanded") == 'true') {
+			if(!$(this).attr("menu-first")) {
+				$(this).attr("menu-first",1);return;
+			}
+			var menu = $(this).parent().find(".dropdown-menu");
+			if(menu.css("display") == 'none') {
+				menu.css('display','block');
+			} else {
+				menu.hide();
+			}
+		}
 	});
 });
