@@ -23,7 +23,7 @@
 		</a>
 		<div class="collapse navbar-collapse col-md-8 col-6" id="navbarText">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
+				<li class="nav-item">
 					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
@@ -41,7 +41,7 @@
 				<li class="nav-item">
 					<a class="nav-link" href="music.html">Music</a>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item active">
 					<a class="nav-link" href="#">News & Events</a>
 				</li>
 				<li class="nav-item">
@@ -64,21 +64,21 @@
 			<div class="carousel-item active">
 				<img class="d-block img-fluid" src="img/maxresdefault.jpg" alt="First slide">
 				<div class="carousel-caption d-md-block text-left">
-					<h1>COMEDY</h1>
-					<p class="movie-caption my-5">Iron Men</p>
-					<p class="movie-url invisible">http://www.youtube.com/embed/uJ7PW9_ixzg?autoplay=1</p>
+					<h1 class="hidden-sm-down">COMEDY</h1>
+					<p class="movie-caption my-5 hidden-sm-down">Iron Men</p>
+					<p class="movie-url invisible">uJ7PW9_ixzg</p>
 				</div>
 			</div>
-			<div class="carousel-item bg-info">
+			<div class="carousel-item bg-lightgrey">
 				<div class="carousel-caption d-md-block text-left">
-					<h1>COMEDY</h1>
-					<p class="movie-caption bg-transparent my-5">Mr. Ibu in the Army</p>
-					<p class="movie-url invisible">http://www.youtube.com/embed/rJk_x5jAQiE?autoplay=1</p>
+					<h1 class="hidden-sm-down">COMEDY</h1>
+					<p class="movie-caption my-5 hidden-sm-down">Mr. Ibu in the Army</p>
+					<p class="movie-url invisible">rJk_x5jAQiE</p>
 				</div>
 			</div>
 		</div>
 		<a class="carousel-control-prev" id="play_movie">
-			<span class="rounded-circle bg-faded p-5" data-toggle="modal" data-target=".modal">
+			<span class="rounded-circle bg-faded" data-toggle="modal" data-target=".modal">
 				<i class="fa fa-play"></i>
 			</span>
 		</a>
@@ -97,7 +97,8 @@
             <button type="button" id="modal_close" data-dismiss="modal" aria-hidden="true">
             	<i class="fa fa-times"></i>
             </button>
-            <iframe width="100%" height="90%" frameborder="0" allowfullscreen=""></iframe>
+						<div id="youtube_player"></div>
+            <!-- <iframe width="100%" height="90%" frameborder="0" allowscriptaccess="always" allowfullscreen=""></iframe> -->
         </div>
     </div>
     <!-- content -->
@@ -116,6 +117,10 @@
     							<div class="play-icon">
     								<i class="fa fa-play"></i>
     							</div>
+									<div class="play-date">
+										<i class="fa fa-clock"></i>
+										FEB 16, 2018
+									</div>
 									<div class="play-stat">
 										<span class="mx-3">
 										<i class="fas fa-comments"></i>
@@ -128,20 +133,22 @@
 									</div>
     						</a>
     						<div class="card-block my-2">
-    							<quote class="card-text">The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question.</quote>
-    						</div>
-    						<div class="card-footer text-muted text-left">
-    							20/04/2017 08:11AM
+    							<h4>Action</h4>
+									<h1>Expert Insider</h1>
     						</div>
     					</div>
     				</div>
-    				<div class="col-12 col-md-6 my-3">
+						<div class="col-12 col-md-6 my-3">
     					<div class="card text-center">
     						<a href="https://viseo.progressionstudios.com/2017/04/grand-design/">
     							<img src="https://pflu5q9xxq859yat-zippykid.netdna-ssl.com/wp-content/uploads/2017/04/dep-space-800x450.jpg" style="width:100%;height:237px;">
     							<div class="play-icon">
     								<i class="fa fa-play"></i>
     							</div>
+									<div class="play-date">
+										<i class="fa fa-clock"></i>
+										FEB 22, 2018
+									</div>
 									<div class="play-stat">
 										<span class="mx-3">
 										<i class="fas fa-comments"></i>
@@ -154,10 +161,8 @@
 									</div>
     						</a>
     						<div class="card-block my-2">
-    							<quote class="card-text">The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question.</quote>
-    						</div>
-    						<div class="card-footer text-muted text-left">
-    							20/04/2017 08:11AM
+    							<h4>Action</h4>
+									<h1>Expert Insider</h1>
     						</div>
     					</div>
     				</div>
@@ -168,6 +173,10 @@
     							<div class="play-icon">
     								<i class="fa fa-play"></i>
     							</div>
+									<div class="play-date">
+										<i class="fa fa-clock"></i>
+										FEB 6, 2018
+									</div>
 									<div class="play-stat">
 										<span class="mx-3">
 										<i class="fas fa-comments"></i>
@@ -179,11 +188,9 @@
 										</span>
 									</div>
     						</a>
-    						<div class="card-block my-2">
-    							<quote class="card-text">The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question.</quote>
-    						</div>
-    						<div class="card-footer text-muted text-left">
-    							20/04/2017 08:11AM
+								<div class="card-block my-2">
+    							<h4>Action</h4>
+									<h1>Expert Insider</h1>
     						</div>
     					</div>
     				</div>
@@ -194,6 +201,10 @@
     							<div class="play-icon">
     								<i class="fa fa-play"></i>
     							</div>
+									<div class="play-date">
+										<i class="fa fa-clock"></i>
+										FEB 16, 2018
+									</div>
 									<div class="play-stat">
 										<span class="mx-3">
 										<i class="fas fa-comments"></i>
@@ -205,11 +216,9 @@
 										</span>
 									</div>
     						</a>
-    						<div class="card-block my-2">
-    							<quote class="card-text">The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question.</quote>
-    						</div>
-    						<div class="card-footer text-muted text-left">
-    							20/04/2017 08:11AM
+								<div class="card-block my-2">
+    							<h4>Action</h4>
+									<h1>Expert Insider</h1>
     						</div>
     					</div>
     				</div>
@@ -220,6 +229,10 @@
     							<div class="play-icon">
     								<i class="fa fa-play"></i>
     							</div>
+									<div class="play-date">
+										<i class="fa fa-clock"></i>
+										FEB 16, 2018
+									</div>
 									<div class="play-stat">
 										<span class="mx-3">
 										<i class="fas fa-comments"></i>
@@ -231,87 +244,64 @@
 										</span>
 									</div>
     						</a>
-    						<div class="card-block my-2">
-    							<quote class="card-text">The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question.</quote>
-    						</div>
-    						<div class="card-footer text-muted text-left">
-    							20/04/2017 08:11AM
+								<div class="card-block my-2">
+    							<h4>Action</h4>
+									<h1>Expert Insider</h1>
     						</div>
     					</div>
     				</div>
-    				<div class="col-12 text-center">
-    					<button type="button" class="btn rounded-0 btn-danger my-3 py-3 px-4" id="load_more">
-    						Load More
-    						<i class="fas fa-arrow-circle-down"></i>
-    					</button>
-    				</div>
     			</div>
+					<div class="col-12 text-center">
+						<button type="button" class="btn rounded-0 btn-danger my-3 py-3 px-4" id="load_more">
+							Load More
+							<i class="fas fa-arrow-circle-down"></i>
+						</button>
+					</div>
     		</div>
     		<!-- right side -->
     		<div class="col-12 my-5 col-md-4">
-    			<form class="my-3 right-item horizontal-center p-4 bg-faded text-left" id="search_form">
+    			<form class="my-3 right-item horizontal-center bg-faded text-left" id="search_form">
   			    <h3 class="text-danger">Search</h3>
     				<input type="text" placeholder="Enter keyword to search the site ..." class="mb-4">
 						<i class="fab fa-sistrix"></i>
     			</form>
-					<div class="right-item my-5 horizontal-center">
-						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmarkangelcomedy%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1435983886447940" height="500" style="border:none;overflow:hidden;width:100%;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-    			</div>
-					<div class="right-item horizontal-center my-3 bg-faded p-4">
-    				<h3 class="text-danger">Movie Categories</h2>
+					<div class="right-item horizontal-center my-3 bg-faded">
+    				<h3 class="text-danger">Categories</h2>
     				<ul class="list-group mt-3 mb-4">
     					<li class="list-item justify-content-between bg-faded">
 								<span class="category-arrow">></span>
     						<a href="#">Comedy</a>
-    						<span class="badge badge-default badge-pill bg-danger">14</span>
+    						<span class="badge badge-default badge-pill">9</span>
     					</li>
     					<li class="list-item justify-content-between bg-faded">
 								<span class="category-arrow">></span>
     						<a href="#">Movie</a>
-    						<span class="badge badge-default badge-pill bg-danger">2</span>
+    						<span class="badge badge-default badge-pill">2</span>
     					</li>
     					<li class="list-item justify-content-between bg-faded">
 								<span class="category-arrow">></span>
 								<a href="#">Action</a>
-    						<span class="badge badge-default badge-pill bg-danger">1</span>
+    						<span class="badge badge-default badge-pill">1</span>
+    					</li>
+    					<li class="list-item justify-content-between bg-faded active">
+<span class="category-arrow">></span>
+    						<a href="#">Action</a>
+    						<span class="badge badge-default badge-pill">1</span>
     					</li>
     					<li class="list-item justify-content-between bg-faded">
 <span class="category-arrow">></span>
     						<a href="#">Action</a>
-    						<span class="badge badge-default badge-pill bg-danger">1</span>
-    					</li>
-    					<li class="list-item justify-content-between bg-faded">
-<span class="category-arrow">></span>
-    						<a href="#">Action</a>
-    						<span class="badge badge-default badge-pill bg-danger">1</span>
+    						<span class="badge badge-default badge-pill">1</span>
     					</li>
     				</ul>
     			</div>
+					<div class="right-item my-5 horizontal-center">
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmarkangelcomedy%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1435983886447940" height="500" style="border:none;overflow:hidden;width:100%;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+					</div>
     			<div class="right-item my-5 horizontal-center" style="max-height:331px;overflow:auto;">
     			<a class="twitter-timeline" href="https://twitter.com/Globethicsnet?ref_src=twsrc%5Etfw">Tweets by Globethicsnet</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     			</div>
-					<div class="right-item horizontal-center my-3 bg-faded p-4">
-    				<h3 class="text-danger">Recent Movie Section</h2>
-    				<ul class="list-group mt-3 mb-4">
-    					<li class="list-item justify-content-between bg-faded">
-    						<a href="#">Comedy</a>
-    					</li>
-    					<li class="list-item justify-content-between bg-faded">
-    						<a href="#">Movie</a>
-    					</li>
-    					<li class="list-item justify-content-between bg-faded">
-								<a href="#">Action</a>
-    					</li>
-    					<li class="list-item justify-content-between bg-faded">
-    						<a href="#">Action</a>
-    					</li>
-    					<li class="list-item justify-content-between bg-faded">
-    						<a href="#">Action</a>
-    					</li>
-    				</ul>
-    			</div>
-    			<div class="right-item horizontal-center my-5 bg-lightgrey p-4">
-    				<h3 class="text-danger">The most beautiful girl in Nigeria</h3>
+    			<div class="right-item horizontal-center my-5 bg-lightgrey">
     				<img src="img/side-bar-advert.jpg" class="img-fluid"/>
     			</div>
     		</div>
@@ -344,24 +334,14 @@
 					</div>
 				</div>
     		</div>
-    		<div class="col-12 col-md-8 my-5">
-    			<div class="row offset-md-2 footer-dvd">
-    				<div class="col-12 col-md-3" id="footer_dvd">
-    					<p class="vertical-center">Now avaliable on DVD's</p>
-    				</div>
-    				<div class="col-12 col-md-3">
-    					<img src="img/ibu.jpg" width="180" height="200" />
-    				</div>
-    				<div class="col-12 col-md-3">
-    					<img src="img/maxresdefault.jpg" width="180" height="200"/>
-    				</div>
-    			</div>
+    		<div class="col-12 col-md-8 my-5 px-5">
+					<img src="img/footer movies.jpg" class="img-fluid"/>
     		</div>
     		<div class="col-md-12 mb-3">
 					<div class="row" style="margin:0;">
 					 <div class="col-md-6 col-12">
     			 <p class="text-white" id="copyright_text">
-    			 	© 2018. Nolly Charly Productions. All rights reserved. | Website designed and hosted by BuildingEwealth Info-Tech Limited
+    			 	© 2018. <b>Nolly Charly Productions</b>. All rights reserved. | Website designed and hosted by <a href="#">BuildingEwealth Info-Tech Limited</a>
     			 </p>
 					 </div>
 					<div class="col-md-6 col-12 text-right org-link">
