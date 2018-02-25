@@ -14,7 +14,7 @@ body {
 .play-icon {
 	background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 100%);
     position: absolute;
-    top: 35%;
+    top: 26%;
     left: 50%;
     border-radius: 150px;
     text-align: center;
@@ -58,31 +58,60 @@ button:focus {
   padding: 0;
 }
 #navbarText ul {
-	padding: .25rem 0;
+  padding: 0;
 }
 #navbarText .dropdown {
   position: static;
 }
 #navbarText .dropdown-menu {
-  width: 94vw;
-  top: 77px;
-  left:auto;
-  right: 0;
   border-radius: 0;
   border: none;
   background: black;
   color: white;
   border-top:2px solid white;
+  top: 75px;
+  left: auto;
+}
+#navbarText .dropdown-item {
+  color: white;
+}
+#navbarText .dropdown-item:hover {
+  background: none;
+}
+#navbarText .featured .dropdown-menu {
+  width: 94vw;
+  right: 0;
 }
 .sub-item {
   padding: 0;
   font-size: 16px;
-  font-weight: 600;
+  text-transform: none;
   line-height: 1;
   letter-spacing: 0.5px;
 }
+.carousel-indicators li {
+	background: none;
+	height: 0;
+	width: 0;
+}
+.carousel-indicators li:after{
+	left: 10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    border:2px solid #fff;
+    width:10px;
+    height:10px;
+}
+.carousel-indicators li.active:after {
+	background: white;
+	box-shadow: 0 0 0 5pt #999;
+}
+.navbar-brand {
+  padding: .35rem 0;
+}
 .navbar {
-  padding: .15rem 1rem;
+  padding: 0 1rem;
 }
 .navbar-toggler {
   outline: 0;
@@ -103,12 +132,14 @@ button:focus {
 	border-bottom: 1px solid #ccc;
 }
 .navbar .nav-item {
-	padding-top: 1rem;
+	padding:1.3rem 1rem;
+}
+.navbar .dropdown-toggle {
+	font-weight: bold;
 }
 .navbar .nav-link {
   font-size: 14px;
   line-height: 1;
-  font-weight: 400;
   letter-spacing: 0.5px;
   font-family: 'Fira Sans Condensed';
   white-space: nowrap;
@@ -194,8 +225,15 @@ button:focus {
 }
 /* left side */
 #left_side_title {
-	font-size: 4rem;
+	font-size: 40px;
+	line-height: 1;
+	font-family: 'Arimo';
 	font-weight: 700;
+	text-transform: uppercase;
+}
+#left_side_title h2 {
+	font-size: 70px;
+	font-weight: bold;
 }
 #load_more {
 	font-weight: 500;
@@ -205,6 +243,7 @@ button:focus {
 }
 .card {
   border-radius: 0;
+  border:0;
 }
 .card-text {
 	font-family: 'Arimo';
@@ -213,6 +252,9 @@ button:focus {
 .card-footer {
 	color: #aaaaaa;
 	font-size: 14px;
+}
+.card-block {
+ 	border: .1px solid rgba(0,0,0,.125);
 }
 .card-block h4 {
   text-align: left;
@@ -231,6 +273,12 @@ button:focus {
   background: #39c686;
   height: 2px;
 }
+.card-block p {
+	padding: 0 2rem;
+	text-align: left;
+	font-family: 'TrebuchetMs', sans-serif;
+	font-size: 16px;
+}
 .card-block h1 {
   padding: 0 2rem;
   color: #070707;
@@ -239,6 +287,7 @@ button:focus {
   line-height: 1.2;
   margin-bottom: 8px;
   font-weight: 700;
+  font-family: 'Arimo';
 }
 #video_list div {
   padding-left: 0;
@@ -267,7 +316,7 @@ button:focus {
   position: absolute;
   color: white;
   font-family: 'Fira Sans Condensed', sans-serif;
-  bottom: 150px;
+  bottom: 268px;
   font-weight: 300;
   font-size: 13px;
   padding-right: 20px;
@@ -279,6 +328,9 @@ button:focus {
 	left: 100%;
   transform: translateX(-100%);
   position: relative;
+}
+.advert {
+	padding: 0;
 }
 .right-item h2 {
 	font-size: 1.3rem;
@@ -323,6 +375,7 @@ button:focus {
 .list-item.active .category-arrow,
 .list-item a:hover {
   color: #d9534f;
+  text-decoration: none;
 }
 .category-arrow {
   position: absolute;
@@ -398,7 +451,7 @@ button:focus {
   color: inherit;
 }
 .org-name {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 .social-icon {
@@ -406,6 +459,9 @@ button:focus {
 }
 .social-icon svg {
 	font-size: inherit;
+}
+.social-icon div:hover {
+	background: #d9534f;
 }
 .social-icon .rounded-0 {
   cursor: pointer;
@@ -418,10 +474,29 @@ button:focus {
     background: #222222;
     border-color:#888888;
 }
+/* about us */
+.about {
+	height: 100vh;
+	background-image: url('../img/about.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 100% 100%;
+}
+.about h2 {
+	font-size: 60px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 1.2;
+}
 @media (max-width: 990px) {
-	#footer_dvd p {
-		margin: 0 !important;
-	}
+#face_tweet div {
+	left: inherit;
+	transform:none;	
+	padding: 0;
+}
+#face_tweet .twitter {
+	max-height: 75% !important;
+}
   #video_list > div {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -453,6 +528,9 @@ button:focus {
   .carousel-inner .carousel-item {
   	height: 65vh;
   }
+  .carousel-caption h1 , .movie-caption {
+  	display: none;
+  }
   .footer-dvd div {
     text-align: center;
     margin: 1rem 0;
@@ -477,8 +555,6 @@ button:focus {
   	margin: 0;
   	font-weight: 700;
   	text-align: left;
-    padding: .25rem 0;
-    text-transform: uppercase;
   }
   .navbar .nav-item {
     padding-left: 0;
@@ -508,18 +584,21 @@ button:focus {
 }
 /** medium **/
 @media (min-width: 1200px) {
-  .navbar .nav-item {
-    padding-left: 1rem;
-  }
   .navbar-transparent .navbar-nav .nav-link {
     font-size: .7em;
     padding-top: .7rem;
+  }
+  #footer_dvd {
+		padding-right: 0 !important;
+  }
+  #footer_dvd div {
+  	text-align: right !important;
   }
 }
 @media (min-width: 1300px) {
   .navbar-transparent .navbar-brand {
     color: #ffffff;
-    font-size: 32px;
+    font-size: 40px;    
   }
   .navbar-transparent .navbar-nav .nav-link {
     font-size: 14px;
