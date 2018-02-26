@@ -71,6 +71,9 @@ button:focus {
   border-top:2px solid white;
   top: 75px;
   left: auto;
+  display: block;
+  transform-origin: 0% 0%;
+  transform: rotateX(90deg);
 }
 #navbarText .dropdown-item {
   color: white;
@@ -152,7 +155,9 @@ button:focus {
   color: #ffffff;
 }
 #navbarText .nav-item:hover> .dropdown>.dropdown-menu {
-  display: block;
+  animation-duration: 3;
+  transform: none;
+  transition: all 2s;
 }
 #navbarText .feedback {
   font-size: 13px;
@@ -491,7 +496,7 @@ button:focus {
 @media (max-width: 990px) {
 #face_tweet div {
 	left: inherit;
-	transform:none;	
+	transform:none;
 	padding: 0;
 }
 #face_tweet .twitter {
@@ -598,7 +603,7 @@ button:focus {
 @media (min-width: 1300px) {
   .navbar-transparent .navbar-brand {
     color: #ffffff;
-    font-size: 40px;    
+    font-size: 40px;
   }
   .navbar-transparent .navbar-nav .nav-link {
     font-size: 14px;
