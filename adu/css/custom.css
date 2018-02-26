@@ -64,6 +64,9 @@ button:focus {
   position: static;
 }
 #navbarText .dropdown-menu {
+  transform: rotateX(90deg);
+  display: block;
+  transform-origin: 0 0;
   width: 94vw;
   top: 77px;
   left:auto;
@@ -120,8 +123,10 @@ button:focus {
   background-color: transparent;
   color: #ffffff;
 }
-#navbarText .nav-item:hover> .dropdown>.dropdown-menu {
-  display: block;
+#navbarText .nav-item:hover> .dropdown>.dropdown-menu {  
+  animation-duration: 4;
+  transform: none;
+  transition: all 2s;  
 }
 #navbarText .feedback {
   font-size: 13px;
@@ -481,7 +486,7 @@ button:focus {
     text-transform: uppercase;
   }
   .navbar .nav-item {
-    padding-left: 0;
+    padding-left: .1rem;
   }
   .navbar-transparent .navbar-brand {
     color: #ffffff;
@@ -509,14 +514,13 @@ button:focus {
 /** medium **/
 @media (min-width: 1200px) {
   .navbar .nav-item {
-    padding-left: 1rem;
-  }
-  .navbar-transparent .navbar-nav .nav-link {
-    font-size: .7em;
-    padding-top: .7rem;
+    padding-left: .7rem;
   }
 }
-@media (min-width: 1300px) {
+@media (min-width: 1330px){
+  .navbar .nav-item {
+    padding-left: .8rem;
+  }
   .navbar-transparent .navbar-brand {
     color: #ffffff;
     font-size: 32px;
