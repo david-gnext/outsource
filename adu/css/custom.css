@@ -347,7 +347,7 @@ button:focus {
     position: absolute;
     color: white;
     font-family: 'Fira Sans Condensed', sans-serif;
-    bottom: 232px;
+    top:40%;
     font-weight: 300;
     font-size: 13px;
     padding-right: 20px;
@@ -529,6 +529,11 @@ button:focus {
     font-weight: 700;
     text-align: center;
     line-height: 1.2;
+}
+@media (max-width: 480px) {
+    .play-date,.play-stat {
+        top: 32%;
+    }
 }
 @media (max-width: 990px) {
     #face_tweet div {
