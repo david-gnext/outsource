@@ -300,6 +300,7 @@ button:focus {
 .card-block h4::after {
     display: block;
     content: '';
+    width: auto;
     background: #d9534f;
     height: 2px;
 }
@@ -329,9 +330,6 @@ button:focus {
 }
 #video_list > div:nth-child(even) {
     padding-left: 1rem;
-}
-#video_list .card img {
-    height: 30%;
 }
 .play-icon .fa-play {
     margin-top: 15px;
@@ -531,9 +529,6 @@ button:focus {
     line-height: 1.2;
 }
 @media (max-width: 480px) {
-    .play-date,.play-stat {
-        top: 32%;
-    }
 }
 @media (max-width: 990px) {
     #face_tweet div {
