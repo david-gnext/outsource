@@ -666,3 +666,8 @@ button:focus {
         padding-top: .5rem;
     }
 }
+@media (min-width: 1400px) {
+  .play-stat,.play-date {
+        top:45%;
+  }
+}
