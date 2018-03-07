@@ -6,6 +6,12 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Fira Sans Condensed Bold';
+    src: url('../fonts/FiraSansCondensed-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'TrebuchetMs';
     src: url('../fonts/trebuc.ttf') format('truetype');
     font-weight: normal;
@@ -86,9 +92,7 @@ button:focus {
     border-top:2px solid white;
     top: 75px;
     left: auto;
-    display: block;
-    transform-origin: 0% 0%;
-    transform: rotateX(90deg);
+    display: none;
 }
 #navbarText .dropdown-item {
     color: white;
@@ -130,6 +134,8 @@ button:focus {
 }
 .navbar-brand {
     padding: .35rem 0;
+    font-family: 'Fira Sans Condensed Bold', sans-serif;
+    font-weight: 800;
 }
 .navbar {
     padding: 0 1rem;
@@ -176,9 +182,7 @@ button:focus {
     color: #ffffff;
 }
 #navbarText .nav-item:hover> .dropdown>.dropdown-menu {
-    animation-duration: 3;
-    transform: none;
-    transition: all 2s;
+    display: block;
 }
 #navbarText .feedback {
     font-size: 13px;
@@ -206,6 +210,10 @@ button:focus {
     width: 68px;
     font-size: 1.3rem;
     border-bottom: 3px solid #d9534f;
+    font-family: 'Fira Sans Condensed Bold', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 .carousel-caption .movie-caption {
     font-size: 80px;
@@ -216,10 +224,15 @@ button:focus {
 #play_movie {
     font-size: 30px;
     left: 48%;
-    color: red;
+    color: white;
+}
+#play_movie.carousel-control-prev {
+    opacity: 1;
 }
 #play_movie span {
-    padding: 2rem;
+    padding: 1.5rem;
+    border: 6px solid rgba(255,255,255, 0.45);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 100%);
 }
 #play_movie .fa-play {
     cursor: pointer;
@@ -288,8 +301,9 @@ button:focus {
 }
 .card-block h4 {
     text-align: left;
-    padding: 0 1.5rem;
+    padding: 0 1.8rem;
     font-size: 12px;
+    font-family: 'Fira Sans Condensed Bold',sans-serif;
     letter-spacing: 0.5px;
     font-weight: 700;
     text-transform: uppercase;
@@ -305,7 +319,7 @@ button:focus {
     height: 2px;
 }
 .card-block p {
-    padding: 0 1.5rem;
+    padding: 0 1.8rem;
     text-align: justify;
     font-family: 'TrebuchetMs', sans-serif;
     font-size: 16px;
@@ -313,20 +327,20 @@ button:focus {
     color: black;
 }
 .card-block h1 {
-    padding: 0 1.5rem;
+    padding: 0 1.8rem;
     color: #070707;
     text-align: left;
     font-size: 30px;
     line-height: 1.2;
     font-weight: 700;
-    font-family: 'Fira Sans Condensed', sans-serif;
+    font-family: 'Fira Sans Condensed Bold', sans-serif;
 }
 #video_list div {
     padding-left: 0;
     padding-right: 0;
 }
 #video_list > div:nth-child(odd) {
-    padding-right: 1rem;
+    padding-right: 1.5rem;
 }
 #video_list > div:nth-child(even) {
     padding-left: 1rem;
@@ -336,16 +350,16 @@ button:focus {
     cursor: pointer;
 }
 .play-stat {
-    right: 20px;
+    right: 24px;
 }
 .play-date {
-    left: 20px;
+    left: 24px;
 }
 .play-stat,.play-date {
     position: absolute;
     color: white;
     font-family: 'Fira Sans Condensed', sans-serif;
-    top:40%;
+    top:200px;
     font-weight: 300;
     font-size: 13px;
     padding-right: 20px;
@@ -654,7 +668,7 @@ button:focus {
 @media (min-width: 1300px) {
     .navbar-transparent .navbar-brand {
         color: #ffffff;
-        font-size: 40px;
+        font-size: 43px;
     }
     .navbar-transparent .navbar-nav .nav-link {
         font-size: 14px;
