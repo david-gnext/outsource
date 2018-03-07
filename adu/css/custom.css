@@ -340,7 +340,7 @@ button:focus {
     padding-right: 0;
 }
 #video_list > div:nth-child(odd) {
-    padding-right: 1.5rem;
+    padding-right: 1.6rem;
 }
 #video_list > div:nth-child(even) {
     padding-left: 1rem;
@@ -387,7 +387,7 @@ button:focus {
     text-transform: uppercase;
     margin-bottom: 20px;
     line-height: 1.4;
-    font-family: 'Fira Sans Condensed', sans-serif;
+    font-family: 'Fira Sans Condensed Bold', sans-serif;
     font-weight: 700;
 }
 .list-item {
@@ -406,14 +406,14 @@ button:focus {
     align-items: center;
     padding: .75rem 1.25rem;
     padding-right: 0;
-    font-family: 'Fira Sans Condensed', sans-serif;
+    font-family: 'Fira Sans Condensed Bold', sans-serif;
     font-weight: 700;
     color: #121213;
     font-size: 15px;
 }
 .list-item a {
     font-weight: bolder;
-    font-family: 'Fira Sans Condensed', sans-serif;
+    font-family: 'Fira Sans Condensed Bold', sans-serif;
     line-height: 1.5;
     color: #121213;
     font-size: 15px;
@@ -458,8 +458,11 @@ button:focus {
     font-size: 20px;
     color: #cccccc;
 }
-#facebook ._2p3a {
-    width: 92%;
+.facebook iframe {
+    width: 100%;
+}
+.facebook {
+  padding: 0;
 }
 /* footer */
 #footer {
@@ -479,6 +482,10 @@ button:focus {
 }
 #footer_dvd h2 {
     font-size: 3rem;
+    font-family: 'Fira Sans Condensed Bold',sans-serif;
+}
+#footer_dvd .img-fluid {
+  height: fit-content;
 }
 #footer blockquote {
     font-family: 'TrebuchetMs', sans-serif;
@@ -490,10 +497,13 @@ button:focus {
 }
 #copyright_text b,#copyright_text a {
     font-weight: 1000;
+    font-family: 'Fira Sans Condensed Bold',sans-serif;
 }
 #copyright_text a {
     color: white;
-    text-decoration: underline;
+}
+#copyright_text a:hover {
+    color: #d9534f;
 }
 #copyright_text,.org-link {
     text-transform: uppercase;
@@ -506,6 +516,7 @@ button:focus {
     color: inherit;
 }
 .org-name {
+    font-family: 'Fira Sans Condensed Bold',sans-serif;
     font-size: 1.5rem;
 }
 .social-icon {
@@ -572,7 +583,7 @@ button:focus {
         transform: none;
     }
     #navbarText .nav-item:hover> .dropdown>.dropdown-menu {
-        display: block;
+        display: none;
     }
     #navbarText .img-fluid {
         margin-left: 0 !important;
@@ -601,6 +612,10 @@ button:focus {
     }
     #footer_dvd img {
         margin-top: 1rem;
+    }
+    #footer_dvd {
+      margin-top: 0 !important;
+      margin-bottom: 1.5rem !important;
     }
     .navbar-transparent {
         background: #f7f7f7;
@@ -649,7 +664,7 @@ button:focus {
         height: 2px;
     }
     .right-item {
-        width: 90%;
+        width: 91%;
     }
 }
 /** medium **/
@@ -677,6 +692,5 @@ button:focus {
 }
 @media (min-width: 1400px) {
   .play-stat,.play-date {
-        top:45%;
   }
 }
