@@ -47,6 +47,9 @@ body {
 .bg-lightgrey {
     background: lightgrey;
 }
+.ml-4-half {
+  margin-left: 2rem;
+}
 .page-row {
     width: 96.2%;
     margin: 0;
@@ -89,7 +92,6 @@ button:focus {
     border: none;
     background: black;
     color: white;
-    border-top:2px solid white;
     top: 75px;
     left: auto;
     display: none;
@@ -158,7 +160,7 @@ button:focus {
 }
 .navbar-transparent {
     background: rgba(0,0,0,0.5);
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 .navbar .nav-item {
     padding:1.3rem 0 1.3rem 1.8rem;
