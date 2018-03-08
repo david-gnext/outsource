@@ -29,6 +29,9 @@ body {
 .hidden {
     display: none;
 }
+.border-bottom {
+    border-bottom: 1px solid white;
+}
 .play-icon {
     background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 100%);
     position: absolute;
@@ -312,6 +315,7 @@ button:focus {
     color: #070707;
     line-height: 1.75;
     width: fit-content;
+    cursor: pointer;
 }
 .card-block h4::after {
     display: block;
@@ -376,6 +380,19 @@ button:focus {
 }
 .advert {
     padding: 0;
+    overflow: hidden;
+}
+.advert div {
+    cursor: pointer;
+    transition: transform 1s;    
+    background-size: cover;
+    background-image: url("../img/side-bar-advert.jpg");
+    height: 385px;
+    width: 100%;
+}
+.advert div:hover {
+    transform: scale(1.2);
+    background-image: linear-gradient(rgba(0,0,0, 0.2),rgba(0,0,0, 0.8)),url("../img/side-bar-advert.jpg");
 }
 .right-item h2 {
     font-size: 1.3rem;
@@ -604,7 +621,7 @@ button:focus {
         height: 1px;
     }
     .carousel-inner .carousel-item {
-        height: 65vh;
+        height: 70vh;
     }
     .carousel-caption h1 , .movie-caption {
         display: none;
@@ -614,6 +631,12 @@ button:focus {
     }
     #footer_dvd img {
         margin-top: 1rem;
+    }
+    #footer_dvd h2 {
+        font-size: 1.5rem;
+    }
+    .border-bottom {
+        border-bottom: 0;
     }
     #footer_dvd {
       margin-top: 0 !important;
@@ -629,9 +652,13 @@ button:focus {
     .navbar-toggler-right {
         right: -12px;
     }
+    .navbar .nav-item {
+        padding: .4rem 0;
+    }
     .navbar .navbar-nav .nav-link {
         width:inherit;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        font-weight: 500;
     }
 }
 @media (min-width: 990px) {
