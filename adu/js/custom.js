@@ -58,12 +58,12 @@ $(document).ready(function () {
                 $(this).attr("menu-first", 1);
                 return;
             }
-            var menu = $(this).parent().find(".dropdown-menu");
-            if (menu.css("display") == 'none') {
-                menu.css('display', 'block');
-            } else {
-                menu.hide();
-            }
+            // var menu = $(this).parent().find(".dropdown-menu");
+            // if (menu.css("display") == 'none') {
+            //     menu.css('display', 'block');
+            // } else {
+            //     menu.hide();
+            // }
         }
     });
 });
