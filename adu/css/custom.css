@@ -7,7 +7,7 @@
 }
 @font-face {
     font-family: 'Fira Sans Condensed Bold';
-    src: url('../fonts/FiraSansCondensed-Bold.ttf') format('truetype');
+    src: url('../fonts/FiraSansCondensed-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -29,12 +29,11 @@ body {
 .hidden {
     display: none;
 }
-.border-bottom:after {
+.border-top:before {
     content: '';
     height: 1px;
     background: white;
     display: block;
-    top: 25px;
     position: relative;
 }
 .play-icon {
@@ -100,7 +99,7 @@ button:focus {
     border: none;
     background: black;
     color: white;
-    top: 75px;
+    top: 78px;
     left: auto;
     display: none;
 }
@@ -146,6 +145,7 @@ button:focus {
     padding: .35rem 0;
     font-family: 'Fira Sans Condensed Bold', sans-serif;
     font-weight: 800;
+    text-transform: uppercase;
 }
 .navbar {
     padding: 0 1rem;
@@ -174,14 +174,14 @@ button:focus {
     padding:1.3rem 0 1.3rem 1.8rem;
 }
 .navbar .dropdown-toggle {
-    font-weight: bold;
+    font-weight: 400;
 }
 .navbar .nav-link {
     font-size: 14px;
     line-height: 1;
     letter-spacing: 0.5px;
     font-family: 'Fira Sans Condensed';
-    font-weight: bold;
+    font-weight: 400;
     white-space: nowrap;
     text-transform: uppercase;
     cursor: pointer;
@@ -217,8 +217,10 @@ button:focus {
 }
 .carousel-caption h1 {
     text-align: left;
-    width: 68px;
-    font-size: 1.3rem;
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -ms-fit-content;
+    font-size: 17px;
     border-bottom: 3px solid #d9534f;
     font-family: 'Fira Sans Condensed Bold', sans-serif;
     font-weight: 700;
@@ -229,7 +231,7 @@ button:focus {
     font-size: 80px;
 }
 .carousel-control-prev,.carousel-control-next {
-    width: 5%;
+    width: 6%;
 }
 #play_movie {
     font-size: 30px;
@@ -311,15 +313,17 @@ button:focus {
 }
 .card-block h4 {
     text-align: left;
-    padding: 0 1.8rem;
+    padding: 0 1rem;
     font-size: 12px;
     font-family: 'Fira Sans Condensed Bold',sans-serif;
     letter-spacing: 0.5px;
-    font-weight: 700;
     text-transform: uppercase;
     color: #070707;
-    line-height: 1.75;
+    line-height: 1.2;
     width: fit-content;
+    width: -moz-fit-content;
+    width: -ms-fit-content;
+    width: -webkit-fit-content;
     cursor: pointer;
 }
 .card-block h4::after {
@@ -330,21 +334,33 @@ button:focus {
     height: 2px;
 }
 .card-block p {
-    padding: 0 1.8rem;
-    text-align: justify;
+    padding: 0 1rem;
+    text-align: left;
     font-family: 'TrebuchetMs', sans-serif;
     font-size: 16px;
+    line-height: 24px;
     margin: 0;
     color: black;
 }
-.card-block h1 {
-    padding: 0 1.8rem;
+.card-block a {
+    padding: 0 1rem;
     color: #070707;
     text-align: left;
+    display: flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    text-decoration: none;
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -ms-fit-content;
     font-size: 30px;
     line-height: 1.2;
     font-weight: 700;
+    cursor: pointer;
     font-family: 'Fira Sans Condensed Bold', sans-serif;
+}
+.card-block a:hover {
+    color: #d9534f;
 }
 #video_list div {
     padding-left: 0;
@@ -390,7 +406,7 @@ button:focus {
 .advert div {
     cursor: pointer;
     transition: transform 1s;    
-    background-size: cover;
+    background-size: 100% 100%;
     background-image: url("../img/side-bar-advert.jpg");
     height: 385px;
     width: 100%;
@@ -418,7 +434,7 @@ button:focus {
     border-bottom: 1px solid #dfe0e2;
     position: relative;
     display: flex;
-    display: -webkit-box;
+    display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
     flex-flow: row wrap;
@@ -438,7 +454,7 @@ button:focus {
     font-size: 15px;
 }
 .list-item a {
-    font-weight: bolder;
+    font-weight: 100;
     font-family: 'Fira Sans Condensed Bold', sans-serif;
     line-height: 1.5;
     color: #121213;
@@ -572,8 +588,7 @@ button:focus {
     height: 100vh;
     background-image: url('../img/about.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100% 100%;
+    background-size: 100% 100%;
 }
 .about h2 {
     font-size: 60px;
@@ -629,7 +644,7 @@ button:focus {
         margin-left: -1.6rem;
         height: 1px;
     }
-    .carousel-inner .carousel-item {
+    .carousel-inner .carousel-item,.about {
         height: 70vh;
     }
     .carousel-caption h1 , .movie-caption {
@@ -644,8 +659,9 @@ button:focus {
     #footer_dvd h2 {
         font-size: 1.5rem;
     }
-    .border-bottom {
-        border-bottom: 0;
+    .border-bottom::before {
+        content: '';
+        height: 0;
     }
     #footer_dvd {
       margin-top: 0 !important;
@@ -669,6 +685,14 @@ button:focus {
         font-size: 1rem;
         font-weight: 500;
     }
+    .navbar .navbar-nav .nav-link:hover {
+        color: #E12B5F;
+    }
+    .navbar-transparent .navbar-brand:hover,
+    .navbar-transparent .navbar-brand:focus {
+        background-color: transparent;
+        color: rgba(0,0,0,0.9);
+    }
 }
 @media (min-width: 990px) {
     .navbar .navbar-brand {
@@ -683,7 +707,7 @@ button:focus {
         font-size: 20px;
     }
     #footer_dvd h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         letter-spacing: 2;
     }
     .navbar-transparent .navbar-nav .nav-link {
@@ -692,9 +716,11 @@ button:focus {
         padding-left: 0;
         font-size: .85em;
     }
-    .navbar-transparent .navbar-nav .active .nav-link,.navbar-transparent .navbar-nav .nav-link:hover {
-        color: #d9534f;
+    .navbar-transparent .navbar-nav .active .nav-link,
+    .navbar-transparent .navbar-nav .nav-link:hover{
+        color: white;
     }
+    .navbar-transparent .navbar-nav .nav-link:hover::after,
     .navbar-transparent .navbar-nav .nav-item.active .nav-link::after {
         display: block;
         content: '';
