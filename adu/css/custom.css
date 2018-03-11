@@ -7,7 +7,7 @@
 }
 @font-face {
     font-family: 'Fira Sans Condensed Bold';
-    src: url('../fonts/FiraSansCondensed-Medium.ttf') format('truetype');
+    src: url('../fonts/FiraSansCondensed-SemiBold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -32,7 +32,9 @@ body {
 .border-top:before {
     content: '';
     height: 1px;
-    background: white;
+    bottom: 15px;
+    width: 30%;
+    background: #3a3a3a;
     display: block;
     position: relative;
 }
@@ -99,7 +101,7 @@ button:focus {
     border: none;
     background: black;
     color: white;
-    top: 78px;
+    top: 100%;
     left: auto;
     display: none;
 }
@@ -316,6 +318,7 @@ button:focus {
     padding: 0 1rem;
     font-size: 12px;
     font-family: 'Fira Sans Condensed Bold',sans-serif;
+    font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: #070707;
@@ -347,7 +350,7 @@ button:focus {
     color: #070707;
     text-align: left;
     display: flex;
-    display: -moz-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     text-decoration: none;
     width: fit-content;
@@ -454,7 +457,7 @@ button:focus {
     font-size: 15px;
 }
 .list-item a {
-    font-weight: 100;
+    font-weight: 500;
     font-family: 'Fira Sans Condensed Bold', sans-serif;
     line-height: 1.5;
     color: #121213;
@@ -585,7 +588,7 @@ button:focus {
 }
 /* about us */
 .about {
-    height: 100vh;
+    height: 60vh;
     background-image: url('../img/about.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -599,6 +602,10 @@ button:focus {
 @media (max-width: 480px) {
 }
 @media (max-width: 990px) {
+    .border-top:before {
+        content: '';
+        height: 0;
+    }
     #face_tweet div {
         left: inherit;
         transform:none;
@@ -707,8 +714,8 @@ button:focus {
         font-size: 20px;
     }
     #footer_dvd h2 {
-        font-size: 1.8rem;
-        letter-spacing: 2;
+        font-size: 1.5rem;
+        letter-spacing: 3;
     }
     .navbar-transparent .navbar-nav .nav-link {
         color: #ffffff;
