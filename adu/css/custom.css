@@ -248,6 +248,13 @@ button:focus {
     border: 6px solid rgba(255,255,255, 0.45);
     background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 100%);
 }
+#play_movie span:hover {
+    border-color: #d9534f; 
+    transform: scale(1.1);
+}
+#play_movie span:hover .fa-play {
+    color: #d9534f;  
+}
 #play_movie .fa-play {
     cursor: pointer;
     font-size: 20px;
@@ -313,8 +320,9 @@ button:focus {
 .card-block {
     border: .1px solid rgba(0,0,0,.125);
 }
-.card-block h4 {
+.card-block a:first-child {
     text-align: left;
+    display: block;
     padding: 0 1rem;
     font-size: 12px;
     font-family: 'Fira Sans Condensed Bold',sans-serif;
@@ -329,7 +337,7 @@ button:focus {
     width: -webkit-fit-content;
     cursor: pointer;
 }
-.card-block h4::after {
+.card-block a:first-child::after {
     display: block;
     content: '';
     width: auto;
@@ -338,7 +346,7 @@ button:focus {
 }
 .card-block p {
     padding: 0 1rem;
-    text-align: left;
+    text-align: justify;
     font-family: 'TrebuchetMs', sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -383,7 +391,7 @@ button:focus {
     right: 24px;
 }
 .play-date {
-    left: 24px;
+    left: 13px;
 }
 .play-stat,.play-date {
     position: absolute;
@@ -550,6 +558,7 @@ button:focus {
 }
 #copyright_text a:hover {
     color: #d9534f;
+    text-decoration: none;
 }
 #copyright_text,.org-link {
     text-transform: uppercase;
@@ -652,7 +661,7 @@ button:focus {
         height: 1px;
     }
     .carousel-inner .carousel-item,.about {
-        height: 70vh;
+        height: 45vh;
     }
     .carousel-caption h1 , .movie-caption {
         display: none;
@@ -755,17 +764,14 @@ button:focus {
 @media (min-width: 1300px) {
     .navbar-transparent .navbar-brand {
         color: #ffffff;
-        font-size: 43px;
+        font-size: 38px;
     }
     .navbar-transparent .navbar-nav .nav-link {
         font-size: 14px;
         padding-top: .5rem;
     }
 }
-<<<<<<< HEAD
-=======
 @media (min-width: 1400px) {
   .play-stat,.play-date {
   }
 }
->>>>>>> bc72e85eaebde22cda7ff880d95e6405c14ac61d

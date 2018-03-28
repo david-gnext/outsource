@@ -41,7 +41,9 @@ $(document).ready(function () {
         Nolly.play();
     });
     $('#myModal').on('hidden.bs.modal', function (e) {
-        $('#myModal iframe').removeAttr('src');
+        $('#myModal iframe').remove();
+        var iframe = '<iframe width="100%" height="90%" frameborder="0" allowscriptaccess="always" allowfullscreen=""></iframe>'
+        $('#myModal .modal-dialog').append(iframe);
     })
     $(window).on('scroll', function () {
         Nolly.naviBg();
