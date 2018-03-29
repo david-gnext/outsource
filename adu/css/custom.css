@@ -172,6 +172,9 @@ button:focus {
     background: rgba(0,0,0,0.5);
     border-bottom: 1px solid rgba(255,255,255,0.5);
 }
+.about-nav {
+    background: rgba(0,0,0,0.3);
+}
 .navbar .nav-item {
     padding:1.3rem 0 1.3rem 1.8rem;
 }
@@ -248,11 +251,11 @@ button:focus {
     border: 6px solid rgba(255,255,255, 0.45);
     background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 100%);
 }
-#play_movie span:hover {
+#movie_slider:hover span {
     border-color: #d9534f; 
     transform: scale(1.1);
 }
-#play_movie span:hover .fa-play {
+#movie_slider:hover .fa-play {
     color: #d9534f;  
 }
 #play_movie .fa-play {
@@ -276,6 +279,7 @@ button:focus {
     top:15px;
     left:15px;
     border:0;
+    z-index: 1;
 }
 #modal_close .fa-times {
     color: #aaa;
@@ -597,7 +601,7 @@ button:focus {
 }
 /* about us */
 .about {
-    height: 60vh;
+    height: 45vh;
     background-image: url('../img/about.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -607,6 +611,12 @@ button:focus {
     font-weight: 700;
     text-align: center;
     line-height: 1.2;
+}
+.about .vertical-center {
+    top: 80%;
+}
+iframe.card {
+    display: initial;
 }
 @media (max-width: 480px) {
 }
@@ -700,6 +710,7 @@ button:focus {
         width:inherit;
         font-size: 1rem;
         font-weight: 500;
+        color: black;
     }
     .navbar .navbar-nav .nav-link:hover {
         color: #E12B5F;
